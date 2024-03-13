@@ -40,6 +40,9 @@ namespace DataAccess.Entities
         public ScoutReport ScoutReport { get; set; }
 
         public List<TargetListReport> TargetListReports { get; set; }
+
+        // many to many 
+        public List<PositionReport> PositionReports { get; set; }
     }
 
 }

@@ -15,8 +15,8 @@ namespace DataAccess.Contexts
         }
 
         public DbSet<Position> Positions { get; set; }
-
-        public DbSet<Report> Reports { get; set; } 
+        public DbSet<Report> Reports { get; set; }
+        public DbSet<PositionReport> PositionReports { get; set; }
         public DbSet<ScoutReport> ScoutReports { get; set; } 
         public DbSet<Scout> Scouts { get; set; }
         public DbSet<ClubScout> ClubScouts { get; set; }

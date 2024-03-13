@@ -34,5 +34,8 @@ namespace DataAccess.Entities
         public int CoachId;
         public Coach Coach { get; set; }
 
+        // many to many 
+        public List<PositionReport> PositionReports { get; set; }
+
     }
 }

@@ -27,6 +27,7 @@ namespace Business.Models
 
         [Required(ErrorMessage = "{0} is required!")]
         [StringLength(25, MinimumLength = 4, ErrorMessage = "{0} must be minimum {2} maximum {1} characters!")]
+        [DisplayName("Tactical System")]
         public string TacticalSystem { get; set; }
 
         [Required(ErrorMessage = "{0} is required!")]
@@ -46,8 +47,10 @@ namespace Business.Models
         [DisplayName("Position Count")]
         public int PositionCount { get; set; }
 
+        [DisplayName("Position Names")]
         public string PositionNames { get; set; }
 
+        [DisplayName("Club Name")]
         public string ClubName { get; set; }
 
 

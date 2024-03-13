@@ -86,8 +86,7 @@ namespace Business.Services
                 TechnicalProficiency = c.TechnicalProficiency,
                 Experience = c.Experience,
                 Guid = c.Guid,
-                ReportCount = 0 ,// Fıx here after updated the db to create a relationship between position and report
-                CoachName = c.Coach.UserName
+                ReportCount = c.PositionReports.Count 
             });
         }
 

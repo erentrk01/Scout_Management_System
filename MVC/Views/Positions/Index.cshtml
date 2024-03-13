@@ -32,6 +32,10 @@
 
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.ReportCount)
+
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.CreatedAt)
             </th>
             <th>
@@ -54,6 +58,9 @@
 
                 <td>
                     @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ReportCount)
                 </td>
 					<td>
 						@Html.DisplayFor(modelItem => item.CreatedAt)
