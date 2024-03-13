@@ -1,0 +1,79 @@
+﻿@model IEnumerable<CoachModel>
+@*Generated from Custom Template.*@
+@*Model namespace using directive should be added to _ViewImports.cshtml.*@
+
+@{
+    ViewData["Title"] = "Coaches";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+
+@if (TempData["CoachMessage"] is not null)
+{
+    <div class="alert alert-info" role="alert">
+        <strong>Success:</strong> <span class="text-dark">@TempData["CoachMessage"]</span>
+    </div>
+}
+
+<p>
+    <a asp-action="Create">Register as a New Coach</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+    
+            <th>
+                @Html.DisplayNameFor(model => model.Experience)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TacticalSystem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Formation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClubName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PositionCount)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+		@foreach (var item in Model) {
+				<tr>
+					<td>
+						@Html.DisplayFor(modelItem => item.UserName)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem => item.Experience)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem => item.TacticalSystem)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem => item.Formation)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem => item.ClubName)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem => item.PositionCount)
+					</td>
+					<td>
+						<a asp-action="Details" asp-route-id="@item.Id">Details</a>&nbsp;|&nbsp;
+						<a asp-action="Edit" asp-route-id="@item.Id">Edit</a>&nbsp;|&nbsp;
+						<a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+					</td>
+				</tr>
+		}
+    </tbody>
+</table>
+
+
+

@@ -1,0 +1,84 @@
+﻿@model CoachModel
+@*Generated from Custom Template.*@
+@*Model namespace using directive should be added to _ViewImports.cshtml.*@
+
+@{
+    ViewData["Title"] = "Register as a New Coach";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<h4>Coach</h4>
+<hr />
+<div class="row">
+    <div class="col-12">
+        <form asp-action="Create">
+		@Html.AntiForgeryToken()
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="row mb-3">
+                <label asp-for="UserName" class="col-2 col-form-label"></label>
+				<div class="col-5">
+					<input asp-for="UserName" class="form-control" />
+					<span asp-validation-for="UserName" class="text-danger"></span>
+				</div>
+            </div>
+            <div class="row mb-3">
+                <label asp-for="Password" class="col-2 col-form-label"></label>
+				<div class="col-5">
+					<input asp-for="Password" class="form-control" />
+					<span asp-validation-for="Password" class="text-danger"></span>
+				</div>
+            </div>
+            <div class="row mb-3">
+                <label asp-for="Experience" class="col-2 col-form-label"></label>
+				<div class="col-5">
+					<select asp-for="Experience" class="form-select">
+						<option value="0">Rookie</option>
+						<option value="1">Regular</option>
+						<option value="2">Key</option>
+						<option value="3">Senior</option>
+						<option value="4">Legend</option>
+					</select>
+					<span asp-validation-for="Experience" class="text-danger"></span>
+				</div>
+            </div>
+            <div class="row mb-3">
+                <label asp-for="TacticalSystem" class="col-2 col-form-label"></label>
+				<div class="col-5">
+					<input asp-for="TacticalSystem" class="form-control" />
+					<span asp-validation-for="TacticalSystem" class="text-danger"></span>
+				</div>
+            </div>
+            <div class="row mb-3">
+                <label asp-for="Formation" class="col-2 col-form-label"></label>
+				<div class="col-5">
+					<input asp-for="Formation" class="form-control" />
+					<span asp-validation-for="Formation" class="text-danger"></span>
+				</div>
+            </div>
+            <div class="row mb-3">
+                <label asp-for="ClubName" class="col-2 col-form-label"></label>
+				<div class="col-5">
+					<select asp-for="ClubId" class="form-select" asp-items="ViewBag.ClubId">
+						<option value="">Select Club</option>
+						
+					</select>
+					<span asp-validation-for="ClubId" class="text-danger"></span>
+				</div>
+            </div>
+            <div class="row mb-3">
+				<div class="offset-2 col-5">
+					<input type="submit" value="Save" class="btn btn-primary" />
+					&nbsp;&nbsp;
+                    <button type="reset" class="btn btn-outline-primary">Reset</button>
+					&nbsp;&nbsp;
+					<a asp-action="Index">Back to List</a>
+				</div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
