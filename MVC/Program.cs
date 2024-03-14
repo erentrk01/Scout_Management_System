@@ -13,6 +13,7 @@ builder.Services.AddDbContext<Db>(options => options.UseSqlServer(connectionStri
 builder.Services.AddScoped<IClubService, ClubService>();
 builder.Services.AddScoped<ICoachService, CoachService>();
 builder.Services.AddScoped<IPositionService, PositionService>();
+builder.Services.AddScoped<IScoutService, ScoutService>();
 #endregion
 
 

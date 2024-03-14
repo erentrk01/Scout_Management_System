@@ -106,6 +106,7 @@ namespace Business.Services
             entity.Personality = model.Personality;
             entity.Experience = model.Experience;
             entity.TechnicalProficiency = model.TechnicalProficiency;
+            entity.LastUpdatedAt = DateTime.Now;
            
 
             _db.Positions.Update(entity);
