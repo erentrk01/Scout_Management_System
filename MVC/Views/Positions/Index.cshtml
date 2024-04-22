@@ -4,6 +4,7 @@
 
 @{
     ViewData["Title"] = "Positions";
+
 }
 
 <h1>@ViewData["Title"]</h1>
@@ -41,9 +42,12 @@
             <th>
                 @Html.DisplayNameFor(model => model.LastUpdatedAt)
             </th>
-         
+            <th>
+                @Html.DisplayNameFor(model => model.Deadline)
+            </th>
+            <th>Actions</th>
            
-            
+
         </tr>
     </thead>
     <tbody>
@@ -68,10 +72,17 @@
 					<td>
 						@Html.DisplayFor(modelItem => item.LastUpdatedAt)
 					</td>
-				
-					
-					
-					<td>
+                <td>
+                    @if (item.Deadline == null)
+                    {
+                        <text>None</text>
+                    }
+                    else
+                    {
+                        @Html.DisplayFor(modelItem => item.Deadline)
+                    }
+                </td>
+                <td>
 						<a asp-action="Details" asp-route-id="@item.Id">Details</a>&nbsp;|&nbsp;
 						<a asp-action="Edit" asp-route-id="@item.Id">Edit</a>&nbsp;|&nbsp;
 						<a asp-action="Delete" asp-route-id="@item.Id">Delete</a>

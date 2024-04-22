@@ -31,6 +31,8 @@ namespace DataAccess.Entities
 
         public string PressingAbility { get; set; }
 
+        public DateTime? Deadline { get; set; }
+
         public int CoachId;
         public Coach Coach { get; set; }
 

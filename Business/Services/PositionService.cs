@@ -48,6 +48,7 @@ namespace Business.Services
                 PressingAbility = model.PressingAbility,
                 LastUpdatedAt = currentlocalTime,
                 CreatedAt = currentlocalTime,
+                Deadline = model.Deadline,
                 
             
 
@@ -86,6 +87,7 @@ namespace Business.Services
                 DribblingAbility = c.DribblingAbility,
                 TechnicalProficiency = c.TechnicalProficiency,
                 Experience = c.Experience,
+                Deadline = c.Deadline,
                 Guid = c.Guid,
                 ReportCount = c.PositionReports.Count 
             });

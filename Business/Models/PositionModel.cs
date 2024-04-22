@@ -18,6 +18,9 @@ namespace Business.Models
         [DisplayName("Created At")]
         public DateTime CreatedAt { get; set; }
 
+        [DisplayName("Submission Deadline")]
+        public DateTime? Deadline { get; set; }
+
         [DisplayName("Last Updated At")]
         public DateTime LastUpdatedAt { get; set; }
 
