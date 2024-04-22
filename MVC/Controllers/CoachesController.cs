@@ -11,11 +11,12 @@ using DataAccess.Entities;
 using Business.Services;
 using Business.Models;
 using DataAccess.Results.Bases;
+using MVC.Controllers.Bases;
 
 //Generated from Custom Template.
 namespace MVC.Controllers
 {
-    public class CoachesController : Controller
+    public class CoachesController : MvcControllerBase
     {
         // TODO: Add service injections here
         private readonly ICoachService _coachService;

@@ -1,4 +1,5 @@
 ﻿using Business.Models;
+using Business.Services.Bases;
 using DataAccess.Contexts;
 using DataAccess.Entities;
 using DataAccess.Results;
@@ -20,13 +21,13 @@ namespace Business.Services
 
         Result Delete(int id);
     }
-    public class CoachService : ICoachService
+    public class CoachService : ServiceBase, ICoachService
     {
-        private readonly Db _db;
+  
 
-        public CoachService(Db db)
+        public CoachService(Db db) : base(db)
         {
-            _db = db;
+            
         }
 
         public Result Add(CoachModel model)

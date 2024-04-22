@@ -1,4 +1,5 @@
 ﻿using Business.Models;
+using Business.Services.Bases;
 using DataAccess.Contexts;
 using DataAccess.Entities;
 using DataAccess.Results;
@@ -20,13 +21,13 @@ namespace Business.Services
 
         Result Delete(int id);
     }
-    public class PositionService : IPositionService
+    public class PositionService : ServiceBase, IPositionService
     {
-        private readonly Db _db;
+       
 
-        public PositionService(Db db)
+        public PositionService(Db db) : base(db) 
         {
-            _db = db;
+            
         }
 
         public Result Add(PositionModel model)

@@ -1,10 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
+using MVC.Controllers.Bases;
 
 namespace MVC.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+    public class WeatherForecastController : MvcControllerBase
     {
         private static readonly string[] Summaries = new[]
         {
