@@ -39,7 +39,7 @@ namespace MVC.Controllers
 		   ClubModel club = _clubService.Query().SingleOrDefault(c => c.Id == id);
 			if (club == null)
 			{
-				return NotFound();
+				return View("Error", "Oops,Club Not Found!");
 			}
 			return View(club);
 		}
@@ -85,7 +85,7 @@ namespace MVC.Controllers
 			ClubModel club = _clubService.Query().SingleOrDefault( c => c.Id == id); // TODO: Add get item service logic here
 			if (club == null)
 			{
-				return NotFound();
+				return View("Error", "Oops, Club Not Found!");
 			}
 			// TODO: Add get related items service logic here to set ViewData if necessary
 			return View(club);
@@ -120,7 +120,7 @@ namespace MVC.Controllers
 	
 			if (club == null)
 			{
-				return NotFound();
+				return View("Error", "Oops, Club Not Found!");
 			}
 			return View(club);
 		}

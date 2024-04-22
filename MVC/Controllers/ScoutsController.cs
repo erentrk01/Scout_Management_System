@@ -41,7 +41,7 @@ namespace MVC.Controllers
          
             if (scout == null)
             {
-                return NotFound();
+                 return View("Error", "Oops, Scout Not Found!");
             }
             return View(scout);
         }
@@ -85,7 +85,7 @@ namespace MVC.Controllers
             ScoutModel scout = _scoutService.Query().SingleOrDefault(c => c.Id == id); // TODO: Add get item service logic here
             if (scout == null)
             {
-                return NotFound();
+                return View("Error", "Oops, Scout Not Found!");
             }
             
             return View(scout);
@@ -120,7 +120,7 @@ namespace MVC.Controllers
             ScoutModel scout = _scoutService.Query().SingleOrDefault(c => c.Id == id);
             if (scout == null)
             {
-                return NotFound();
+                return View("Error", "Oops, Scout Not Found!");
             }
             return View(scout);
         }

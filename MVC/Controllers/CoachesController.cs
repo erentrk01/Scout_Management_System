@@ -42,7 +42,7 @@ namespace MVC.Controllers
 			CoachModel coach = _coachService.Query().SingleOrDefault(c => c.Id == id); // TODO: Add get item service logic here
 			if (coach == null)
             {
-                return NotFound();
+                return View("Error", "Oops, Coach Not Found!");
             }
             return View(coach);
         }
@@ -112,7 +112,7 @@ namespace MVC.Controllers
 			CoachModel coach = _coachService.Query().SingleOrDefault(c => c.Id == id); // TODO: Add get item service logic here
             if (coach == null)
             {
-                return NotFound();
+                return View("Error", "Oops, Coach Not Found!");
             }
 			// TODO: Add get related items service logic here to set ViewData if necessary
 			ViewData["ClubId"] = new SelectList(clubList, "Value", "Text");
@@ -148,7 +148,7 @@ namespace MVC.Controllers
             CoachModel coach = _coachService.Query().SingleOrDefault(c => c.Id == id); // TODO: Add get item service logic here
             if (coach == null)
             {
-                return NotFound();
+                return View("Error", "Oops, Coach Not Found!");
             }
             return View(coach);
         }

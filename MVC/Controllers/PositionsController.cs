@@ -41,7 +41,7 @@ namespace MVC.Controllers
 
             if (position == null)
             {
-                return NotFound();
+                return View("Error", "Oops, Position Not Found!");
             }
             return View(position);
         }
@@ -83,7 +83,7 @@ namespace MVC.Controllers
            
             if (position == null)
             {
-                return NotFound();
+                return View("Error", "Oops, Position Not Found!");
             }
             // TODO: Add get related items service logic here to set ViewData if necessary
             return View(position);
@@ -120,7 +120,7 @@ namespace MVC.Controllers
 			
 			if (position == null)
             {
-                return NotFound();
+                return View("Error", "Oops, Position Not Found!");
             }
             return View(position);
         }
